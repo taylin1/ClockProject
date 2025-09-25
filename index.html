@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,25 +8,31 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    
+
     <!--Container to hold and display current time-->
     <div class="container">
         <h2 class="header">Digital Clock 🕰️</h2>
         <div class="displayTime">
-        <p id="time"></p>
+            <p id="time"></p>
+            <p id="date"></p>
         </div>
     </div>
-   
-   <script>
-    //To make the time tick every second
-    setInterval(currentTimer, 1000);
 
-    //Function to get the time
-    function currentTimer() {
-        const d = new Date();
-        document.getElementById("time").innerHTML = d.toLocaleTimeString();
-    }
-   </script>
+    <script>
+        //To make the time tick every second
+        setInterval(currentTimer, 1000);
+
+        //Function to get the time and date
+        function currentTimer() {
+            const d = new Date();
+            document.getElementById("time").innerHTML = d.toLocaleTimeString();
+            document.getElementById("date").innerHTML = d.toDateString();
+
+        }
+    </script>
+
 </body>
+
 </html>
