@@ -24,11 +24,15 @@
         //To make the time tick every second
         setInterval(currentTimer, 1000);
 
+        const showTime = document.getElementById("time");
+        const showDate = document.getElementById("date");
+
         //Function to get the time and date
         function currentTimer() {
+
             const d = new Date();
-            document.getElementById("time").innerHTML = d.toLocaleTimeString();
-            document.getElementById("date").innerHTML = d.toDateString();
+            showTime.innerHTML=d.toLocaleTimeString();
+            showDate.innerHTML=d.toDateString();
 
         }
     </script>
